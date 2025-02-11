@@ -1,0 +1,57 @@
+/* 전체박스 */
+#page {width: 99vw; height: 99vh; margin: 0 auto;}
+
+.main-banner {
+    width: 100%;
+    height: 30%;
+    background-image: url(https://cdn.pixabay.com/photo/2020/05/02/09/59/pup-5120625_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* todo : 본문 전체박스 */
+.container {width: 100%; margin:2rem auto;}
+/* todo : 본문-대표 상품 이미지(content-box) */
+.content-box{width: 100%;padding: 5px;}
+.content-box > img{max-width: 100%; height: auto;}
+.clear{clear: both;}
+
+/* todo : 실제 상품 목록 */
+.product-area h2{font-size: 1.5rem;padding: 1.5rem;}
+.product-list li {
+    float:left; width: 50%;
+    border:1px solid var(--blue-light-10)}
+.product-list li a {
+    display: block;
+    height: 2.75rem;
+    background-color: var(--blue-light-30);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* todo : 박스(.product 가로크기) -> img 상품 이미지(100%) */
+.product{
+    width: 100%;
+    padding: 5px;
+    float: left;}
+
+.product > img{
+    max-width: 100%;
+    height: auto;}
+
+@media screen and (min-width: 768px){
+     /*todo : 화면 여백  */
+    .container {width: 90%;}
+    /* todo : 대표(추천) 상품 이미지 변경 */
+    .content-box {width: 33%; float: left;}
+    .product-list li {border: none; width: auto;}
+    .product-list li a {background-color: transparent;
+    color: var(--black); height: auto; padding: 1rem;}
+    .product{width: 25%;}
+
+}
+
+@media screen and (min-width: 1024px){ 
+    .container {width: 60%;}
+}
